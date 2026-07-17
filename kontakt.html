@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kontakt & Booking — Electric Dance Affair e.V.</title>
+  <meta name="description" content="Kontaktiert Electric Dance Affair e.V. für Booking-Anfragen, Kooperationen und mehr.">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div class="site-wrapper">
+
+    <header class="site-header">
+      <div class="inner">
+        <a href="index.html" class="site-brand">
+          <img src="images/logo.png" alt="Electric Dance Affair Logo">
+          <span>Electric Dance Affair e.V.</span>
+        </a>
+        <button class="nav-toggle" aria-label="Menü" onclick="document.querySelector('.site-nav').classList.toggle('open')">&#9776;</button>
+        <nav>
+          <ul class="site-nav">
+            <li><a href="index.html">Veranstaltungen</a></li>
+            <li><a href="https://electricdanceaffair.bandcamp.com/" target="_blank" rel="noopener">Shop</a></li>
+            <li><a href="kontakt.html" class="active">Kontakt/Booking</a></li>
+            <li><a href="artists.html">Artists</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main class="page-content">
+      <section class="section page-padding">
+        <div class="content-constrained">
+          <h2>Kontakt &amp; Booking</h2>
+
+          <!-- Option 1: Formspree (kostenlos, 50 Submissions/Monat)
+               Erstelle einen Account auf formspree.io und ersetze YOUR_FORM_ID -->
+          <form class="contact-form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+            <div class="form-field">
+              <label>Name <span class="req">(erforderlich)</span></label>
+              <input type="text" name="name" required>
+            </div>
+            <div class="form-field">
+              <label>E-Mail <span class="req">(erforderlich)</span></label>
+              <input type="email" name="email" required>
+            </div>
+            <div class="form-field">
+              <label>Nachricht</label>
+              <textarea name="message"></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary">Absenden</button>
+          </form>
+
+          <p style="margin-top: 2rem;">Oder schreibt uns direkt: <a href="mailto:info@electric-dance-affair.de">info@electric-dance-affair.de</a></p>
+
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="inner">
+        <div class="footer-col">
+          <div class="footer-brand">Electric Dance Affair e.V.</div>
+          <div class="footer-tagline">wo Kunst elektrisiert!</div>
+        </div>
+        <div class="footer-col">
+          <div class="footer-col-title">Seiten</div>
+          <a href="ueber.html">Über</a>
+          <a href="impressum.html">Impressum</a>
+          <a href="artists.html">Artists</a>
+          <a href="index.html">Veranstaltungen</a>
+          <a href="https://electricdanceaffair.bandcamp.com/" target="_blank" rel="noopener">Shop</a>
+          <a href="kontakt.html">Kontakt/Booking</a>
+        </div>
+        <div class="footer-col">
+          <div class="footer-col-title">Social</div>
+          <a href="https://www.instagram.com/electric.dance.affair/" target="_blank" rel="noopener">Instagram</a>
+          <a href="https://soundcloud.com/electric-dance-affair" target="_blank" rel="noopener">SoundCloud</a>
+          <a href="https://electricdanceaffair.bandcamp.com/" target="_blank" rel="noopener">Bandcamp</a>
+        </div>
+        <div class="footer-col">
+          <div class="footer-col-title">Rechtliches</div>
+          <a href="impressum.html">Impressum</a>
+          <a href="datenschutz.html">Datenschutz</a>
+        </div>
+      </div>
+    </footer>
+
+  </div>
+</body>
+</html>
