@@ -35,23 +35,18 @@
             <span class="label">Kontakt &amp; Booking</span>
           </div>
 
-          <form class="contact-form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
-            <div class="form-field">
-              <label>Name <span class="req">(erforderlich)</span></label>
-              <input type="text" name="name" required>
-            </div>
-            <div class="form-field">
-              <label>E-Mail <span class="req">(erforderlich)</span></label>
-              <input type="email" name="email" required>
-            </div>
-            <div class="form-field">
-              <label>Nachricht</label>
-              <textarea name="message"></textarea>
-            </div>
-            <button type="submit" class="btn btn-primary" style="align-self: start;">Absenden</button>
-          </form>
+          <p>Schreibt uns für Booking-Anfragen, Kooperationen oder Fragen:</p>
+          <p class="email-reveal"><a id="contact-mail" href="#" onclick="return false;">E-Mail-Adresse laden</a></p>
 
-          <p class="email-alt">Oder direkt: <a href="mailto:info@electric-dance-affair.de">info@electric-dance-affair.de</a></p>
+          <script>
+          (function(){
+            var a='info',b='electric-dance-affair.de',m=document.getElementById('contact-mail');
+            var addr=a+'@'+b;
+            m.href='mailto:'+addr;
+            m.textContent=addr;
+            m.onclick=null;
+          })();
+          </script>
         </div>
       </section>
     </main>

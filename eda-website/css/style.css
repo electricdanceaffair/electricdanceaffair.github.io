@@ -1,4 +1,45 @@
-@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&family=Syne:wght@400;700;800&display=swap');
+@font-face {
+  font-family: 'Outfit';
+  font-style: normal;
+  font-weight: 300;
+  font-display: swap;
+  src: url('../fonts/outfit-300.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'Outfit';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('../fonts/outfit-400.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'Outfit';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url('../fonts/outfit-600.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'Syne';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('../fonts/syne-400.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'Syne';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url('../fonts/syne-700.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'Syne';
+  font-style: normal;
+  font-weight: 800;
+  font-display: swap;
+  src: url('../fonts/syne-800.ttf') format('truetype');
+}
 
 :root {
   --ground: #0C0C0C;
@@ -209,6 +250,11 @@ img { max-width: 100%; height: auto; display: block; }
 .hero {
   padding: clamp(80px, 15vw, 180px) var(--gutter) clamp(60px, 10vw, 120px);
   text-align: center;
+  position: relative;
+  background:
+    radial-gradient(ellipse 90% 70% at 50% 20%, rgba(139, 123, 247, 0.28), transparent 65%),
+    radial-gradient(ellipse 70% 60% at 15% 80%, rgba(139, 123, 247, 0.15), transparent 55%),
+    radial-gradient(ellipse 60% 50% at 85% 60%, rgba(201, 162, 39, 0.12), transparent 55%);
 }
 
 .hero h1 { margin-bottom: 0.4em; letter-spacing: -0.03em; }
