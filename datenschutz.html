@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Datenschutzerklärung — Electric Dance Affair e.V.</title>
   <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" href="images/logo.png" type="image/png">
 </head>
 <body>
   <div class="site-wrapper">
@@ -20,6 +21,7 @@
           <ul class="site-nav">
             <li><a href="index.html">Veranstaltungen</a></li>
             <li><a href="https://electricdanceaffair.bandcamp.com/" target="_blank" rel="noopener">Shop</a></li>
+            <li><a href="ueber.html">Über</a></li>
             <li><a href="kontakt.html">Kontakt</a></li>
             <li><a href="artists.html">Artists</a></li>
           </ul>
@@ -30,21 +32,19 @@
     <main class="page-content">
       <section class="section">
         <div class="wrap wrap--narrow">
-          <div class="section__eyebrow">
-            <span class="label">Datenschutzerklärung</span>
-          </div>
+          <h1 class="label">Datenschutzerklärung</h1>
           <div class="legal">
             <h3>1. Verantwortlicher</h3>
             <p>Electric Dance Affair e.V.<br>
             Breitachweg 15, 86163 Augsburg<br>
-            E-Mail: <a href="mailto:info@electric-dance-affair.de">info@electric-dance-affair.de</a><br>
+            E-Mail: <a id="ds-mail-1" href="#">E-Mail laden</a><br>
             Telefon: +49 163 7079161</p>
 
             <h3>2. Hosting</h3>
             <p>Diese Website wird über GitHub Pages (GitHub Inc., 88 Colin P. Kelly Jr. Street, San Francisco, CA 94107, USA) gehostet. Beim Besuch der Website werden automatisch technische Daten (z.&nbsp;B. IP-Adresse, Browsertyp, Zeitpunkt des Zugriffs) erfasst. Dies ist zur Bereitstellung der Website erforderlich (Art. 6 Abs. 1 lit. f DSGVO). GitHub verarbeitet Daten ggf. auch in den USA auf Grundlage von Standardvertragsklauseln (Art. 46 Abs. 2 lit. c DSGVO). Weitere Informationen: <a href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement" target="_blank" rel="noopener">GitHub Privacy Statement</a>.</p>
 
             <h3>3. Kontaktaufnahme</h3>
-            <p>Wenn ihr uns per E-Mail oder Kontaktformular kontaktiert, werden die von euch mitgeteilten Daten (Name, E-Mail-Adresse, Nachricht) zur Bearbeitung eurer Anfrage verarbeitet (Art. 6 Abs. 1 lit. b DSGVO). Eure Daten werden gelöscht, sobald die Anfrage abschließend bearbeitet ist und keine gesetzlichen Aufbewahrungspflichten bestehen.</p>
+            <p>Wenn ihr uns per E-Mail kontaktiert, werden die von euch mitgeteilten Daten (Name, E-Mail-Adresse, Nachricht) zur Bearbeitung eurer Anfrage verarbeitet (Art. 6 Abs. 1 lit. b DSGVO). Eure Daten werden gelöscht, sobald die Anfrage abschließend bearbeitet ist und keine gesetzlichen Aufbewahrungspflichten bestehen.</p>
 
             <h3>4. Schriftarten</h3>
             <p>Diese Website verwendet die Schriftarten Outfit und Syne. Die Schriftarten sind lokal auf unserem Server gespeichert — es findet keine Verbindung zu Google-Servern statt.</p>
@@ -68,7 +68,7 @@
               <li>Datenübertragbarkeit (Art. 20 DSGVO)</li>
               <li>Widerspruch gegen die Verarbeitung (Art. 21 DSGVO)</li>
             </ul>
-            <p>Wendet euch dazu an: <a href="mailto:info@electric-dance-affair.de">info@electric-dance-affair.de</a></p>
+            <p>Wendet euch dazu an: <a id="ds-mail-2" href="#">E-Mail laden</a></p>
 
             <h3>9. Beschwerderecht</h3>
             <p>Ihr habt das Recht, euch bei einer Datenschutz-Aufsichtsbehörde zu beschweren. Zuständig ist:</p>
@@ -81,6 +81,16 @@
 
             <p><em>Stand: Juli 2026</em></p>
           </div>
+          <script>
+          (function(){
+            var a='info',b='electric-dance-affair.de',addr=a+'@'+b;
+            ['ds-mail-1','ds-mail-2'].forEach(function(id){
+              var m=document.getElementById(id);
+              m.href='mailto:'+addr;
+              m.textContent=addr;
+            });
+          })();
+          </script>
         </div>
       </section>
     </main>

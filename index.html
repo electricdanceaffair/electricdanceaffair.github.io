@@ -6,6 +6,7 @@
   <title>Electric Dance Affair e.V. — wo Kunst elektrisiert!</title>
   <meta name="description" content="Electric Dance Affair e.V. — eine pulsierende Community, die Kunst, Musik und Performance auf einzigartige Weise verbindet. Augsburg.">
   <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" href="images/logo.png" type="image/png">
 </head>
 <body>
   <div class="site-wrapper">
@@ -21,6 +22,7 @@
           <ul class="site-nav">
             <li><a href="index.html" class="active">Veranstaltungen</a></li>
             <li><a href="https://electricdanceaffair.bandcamp.com/" target="_blank" rel="noopener">Shop</a></li>
+            <li><a href="ueber.html">Über</a></li>
             <li><a href="kontakt.html">Kontakt</a></li>
             <li><a href="artists.html">Artists</a></li>
           </ul>
@@ -174,10 +176,11 @@
 
   <div class="modal-overlay" id="sponsoring-modal" onclick="if(event.target===this)this.classList.remove('open')">
     <div class="modal">
-      <button class="modal-close" onclick="document.getElementById('sponsoring-modal').classList.remove('open')">&times;</button>
+      <button class="modal-close" aria-label="Schließen" onclick="document.getElementById('sponsoring-modal').classList.remove('open')">&times;</button>
       <h3>Sponsoring</h3>
       <div class="modal-pdf">
         <embed src="sponsoring-sheet.pdf" type="application/pdf">
+        <p class="modal-pdf-fallback">PDF-Vorschau wird auf diesem Gerät nicht unterstützt.</p>
       </div>
       <a href="sponsoring-sheet.pdf" download class="btn btn-primary" style="align-self:start;margin-top:1rem;">PDF herunterladen</a>
     </div>

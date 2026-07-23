@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Impressum — Electric Dance Affair e.V.</title>
   <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" href="images/logo.png" type="image/png">
 </head>
 <body>
   <div class="site-wrapper">
@@ -20,6 +21,7 @@
           <ul class="site-nav">
             <li><a href="index.html">Veranstaltungen</a></li>
             <li><a href="https://electricdanceaffair.bandcamp.com/" target="_blank" rel="noopener">Shop</a></li>
+            <li><a href="ueber.html">Über</a></li>
             <li><a href="kontakt.html">Kontakt</a></li>
             <li><a href="artists.html">Artists</a></li>
           </ul>
@@ -30,9 +32,7 @@
     <main class="page-content">
       <section class="section">
         <div class="wrap wrap--narrow">
-          <div class="section__eyebrow">
-            <span class="label">Impressum</span>
-          </div>
+          <h1 class="label">Impressum</h1>
           <div class="legal">
             <h3>Angaben gemäß § 5 TMG</h3>
             <p><strong>Electric Dance Affair e.V.</strong><br>
@@ -48,8 +48,16 @@
 
             <h3>Kontakt</h3>
             <p>Telefon: +49 163 7079161<br>
-            E-Mail: <a href="mailto:info@electric-dance-affair.de">info@electric-dance-affair.de</a></p>
+            E-Mail: <a id="impressum-mail" href="#">E-Mail laden</a></p>
           </div>
+          <script>
+          (function(){
+            var a='info',b='electric-dance-affair.de',m=document.getElementById('impressum-mail');
+            var addr=a+'@'+b;
+            m.href='mailto:'+addr;
+            m.textContent=addr;
+          })();
+          </script>
         </div>
       </section>
     </main>
