@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://electric-dance-affair.de/sitemap.xml
