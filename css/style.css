@@ -313,6 +313,18 @@ h1.label {
   transform: translateY(-1px);
 }
 
+.events-toggle {
+  margin-top: 1.5rem;
+  background: transparent;
+  color: var(--text-muted);
+  border-color: var(--border);
+}
+
+.events-toggle:hover {
+  color: var(--text);
+  border-color: var(--text-muted);
+}
+
 /* ═══ EVENTS ═══ */
 
 .events-list { display: flex; flex-direction: column; }

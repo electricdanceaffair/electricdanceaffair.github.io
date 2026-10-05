@@ -97,15 +97,16 @@
   </div>
 
   <script>
+    const MAX_VISIBLE = 10;
     fetch('events.json')
       .then(r => r.json())
       .then(events => {
         const list = document.getElementById('events-list');
-        list.innerHTML = events.map(e => {
+        const html = events.map((e, i) => {
           const name = e.link
             ? `<a href="${e.link}" target="_blank" rel="noopener">${e.name}</a>`
             : e.name;
-          return `<article class="event-item">
+          return `<article class="event-item"${i >= MAX_VISIBLE ? ' style="display:none"' : ''}>
             <div class="event-date">${e.date}</div>
             <div class="event-body">
               <div class="event-name">${name}</div>
@@ -114,6 +115,17 @@
             </div>
           </article>`;
         }).join('');
+        list.innerHTML = html;
+        if (events.length > MAX_VISIBLE) {
+          const btn = document.createElement('button');
+          btn.className = 'btn btn-secondary events-toggle';
+          btn.textContent = 'Ältere Veranstaltungen anzeigen';
+          btn.onclick = () => {
+            list.querySelectorAll('.event-item[style]').forEach(el => el.style.display = '');
+            btn.remove();
+          };
+          list.after(btn);
+        }
       });
   </script>
 </body>
