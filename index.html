@@ -49,106 +49,7 @@
             <span class="label">Veranstaltungen</span>
           </div>
 
-          <div class="events-list">
-
-            <article class="event-item">
-              <div class="event-date">24.10.2026</div>
-              <div class="event-body">
-                <div class="event-name">BAU MAL EIN — Pt. 3</div>
-                <div class="event-meta">Save the date! ✨ Mehr Infos bald.</div>
-              </div>
-            </article>
-
-            <article class="event-item">
-              <div class="event-date">25.07.2026</div>
-              <div class="event-body">
-                <div class="event-name">Rave Affair — Birthday Bash</div>
-                <div class="event-meta">Mixed Techno · 23–05 Uhr · Eintritt Spendenbasis</div>
-                <div class="event-location">Soho Stage, Ludwigstraße 34, Augsburg</div>
-              </div>
-            </article>
-
-            <article class="event-item">
-              <div class="event-date">04.04.2026</div>
-              <div class="event-body">
-                <div class="event-name"><a href="https://www.instagram.com/p/DWGeeRniBM9/" target="_blank" rel="noopener">BAU MAL EIN — Pt. 2</a></div>
-                <div class="event-location">Augsburg</div>
-              </div>
-            </article>
-
-            <article class="event-item">
-              <div class="event-date">10.01.2026</div>
-              <div class="event-body">
-                <div class="event-name"><a href="https://www.instagram.com/p/DSSNsBjCFv4/" target="_blank" rel="noopener">Electric Dance Affair Clubfestival</a></div>
-                <div class="event-meta">Konzert + Aftershow · 20–05 Uhr · VVK 18€ · AK 22€</div>
-                <div class="event-location">Soho Stage, Ludwigstraße 34, Augsburg</div>
-              </div>
-            </article>
-
-            <article class="event-item">
-              <div class="event-date">21.11.2025</div>
-              <div class="event-body">
-                <div class="event-name"><a href="https://www.instagram.com/p/DQ4oixwiBpZ/" target="_blank" rel="noopener">Electric Dance Affair at City Club</a></div>
-                <div class="event-meta">Bounce · Techno · Trance · 23–05 Uhr</div>
-                <div class="event-location">City Club, Augsburg</div>
-              </div>
-            </article>
-
-            <article class="event-item">
-              <div class="event-date">18.10.2025</div>
-              <div class="event-body">
-                <div class="event-name"><a href="https://www.instagram.com/p/DPgkqbRiMYO/" target="_blank" rel="noopener">Rave Affair — E.D.A. Allstar Edition</a></div>
-                <div class="event-meta">Mixed Techno · 21–09 Uhr · Eintritt 10€</div>
-                <div class="event-location">Hallo Werner, Schrannenstraße 8, Augsburg</div>
-              </div>
-            </article>
-
-            <article class="event-item">
-              <div class="event-date">27.09.2025</div>
-              <div class="event-body">
-                <div class="event-name"><a href="https://www.instagram.com/reel/DOY_ftXiGgX/" target="_blank" rel="noopener">Atzentechno Vol. 2</a></div>
-                <div class="event-meta">Hardgroove · Trance · Hardtechno · 23–05 Uhr · Spendenbasis</div>
-                <div class="event-location">Soho Stage, Ludwigstraße 34, Augsburg</div>
-              </div>
-            </article>
-
-            <article class="event-item">
-              <div class="event-date">Aug. 2025</div>
-              <div class="event-body">
-                <div class="event-name"><a href="https://www.instagram.com/p/DM8IrKSI2Xn/" target="_blank" rel="noopener">KULTURLET — AUGUST</a></div>
-                <div class="event-meta">DJ Workshops · Malworkshops · Open Decks · Skill Sharing</div>
-                <div class="event-location">Kongress am Park, Augsburg</div>
-              </div>
-            </article>
-
-            <article class="event-item">
-              <div class="event-date">08.08.2025</div>
-              <div class="event-body">
-                <div class="event-name"><a href="https://www.instagram.com/p/DMYgqMNona3/" target="_blank" rel="noopener">KULTURLET OPENING &amp; AFTERPARTY</a></div>
-                <div class="event-meta">Hardgroove · Trance · Hardtechno · 23–05 Uhr · Spendenbasis</div>
-                <div class="event-location">Soho Stage, Ludwigstraße 34, Augsburg</div>
-              </div>
-            </article>
-
-            <article class="event-item">
-              <div class="event-date">05.07.2025</div>
-              <div class="event-body">
-                <div class="event-name"><a href="https://www.instagram.com/p/DLSpdJgogaD/" target="_blank" rel="noopener">SOMMERNÄCHTE AFTERPARTY</a></div>
-                <div class="event-meta">Downtempo · Peaktime · Driving Techno · 23–07 Uhr · AK 12€</div>
-                <div class="event-location">Soho Stage, Ludwigstraße 34, Augsburg</div>
-              </div>
-            </article>
-
-            <article class="event-item">
-              <div class="event-date">20.06.2025</div>
-              <div class="event-body">
-                <div class="event-name"><a href="https://www.instagram.com/p/DKu3ecvI4qL/" target="_blank" rel="noopener">RAVE AFFAIR — B2B EDITION</a></div>
-                <div class="event-meta">21–07 Uhr · AK 10€ · Afterhour Spendenbasis</div>
-                <div class="event-location">Hallo Werner, Augsburg</div>
-              </div>
-            </article>
-
-          </div>
+          <div class="events-list" id="events-list"></div>
         </div>
       </section>
     </main>
@@ -195,5 +96,25 @@
     </div>
   </div>
 
+  <script>
+    fetch('events.json')
+      .then(r => r.json())
+      .then(events => {
+        const list = document.getElementById('events-list');
+        list.innerHTML = events.map(e => {
+          const name = e.link
+            ? `<a href="${e.link}" target="_blank" rel="noopener">${e.name}</a>`
+            : e.name;
+          return `<article class="event-item">
+            <div class="event-date">${e.date}</div>
+            <div class="event-body">
+              <div class="event-name">${name}</div>
+              ${e.meta ? `<div class="event-meta">${e.meta}</div>` : ''}
+              ${e.location ? `<div class="event-location">${e.location}</div>` : ''}
+            </div>
+          </article>`;
+        }).join('');
+      });
+  </script>
 </body>
 </html>
