@@ -33,24 +33,11 @@
 
     <main class="page-content">
       <section class="section">
-        <div class="wrap wrap--narrow">
-          <h1 class="label">Artists</h1>
-          <p>Hier werden unsere Artists vorgestellt — kommt bald.</p>
-
-          <!--
-            Vorlage für einen Artist-Eintrag:
-
-            <article class="event-item">
-              <div class="event-body">
-                <div class="event-name">DJ-Name</div>
-                <div class="event-location">Genre / Kurze Bio</div>
-                <div class="social-row">
-                  <a href="#" class="social-pill" target="_blank" rel="noopener">Instagram</a>
-                  <a href="#" class="social-pill" target="_blank" rel="noopener">SoundCloud</a>
-                </div>
-              </div>
-            </article>
-          -->
+        <div class="wrap">
+          <div class="section__eyebrow">
+            <span class="label">Artists</span>
+          </div>
+          <div class="artists-grid" id="artists-grid"></div>
         </div>
       </section>
     </main>
@@ -84,5 +71,62 @@
     </footer>
 
   </div>
+
+  <script>
+    const PLATFORM_LABELS = {
+      instagram: 'Instagram',
+      soundcloud: 'SoundCloud',
+      bandcamp: 'Bandcamp',
+      spotify: 'Spotify',
+      youtube: 'YouTube',
+      mixcloud: 'Mixcloud'
+    };
+
+    fetch('artists.json')
+      .then(r => r.json())
+      .then(artists => {
+        const grid = document.getElementById('artists-grid');
+        grid.innerHTML = artists.map(a => {
+          const photo = a.photo
+            ? `<div class="artist-photo"><img src="${a.photo}" alt="${a.name}" loading="lazy"></div>`
+            : `<div class="artist-photo artist-photo--placeholder"><span>${a.name.charAt(0)}</span></div>`;
+
+          const genres = (a.genres || [])
+            .map(g => `<span class="artist-tag">${g}</span>`).join('');
+
+          const links = a.links
+            ? Object.entries(a.links)
+                .map(([k, url]) => `<a href="${url}" class="social-pill" target="_blank" rel="noopener">${PLATFORM_LABELS[k] || k}</a>`)
+                .join('')
+            : '';
+
+          const details = [
+            a.activeSince ? ['Aktiv seit', a.activeSince] : null,
+            a.equipment ? ['Equipment', a.equipment] : null,
+            a.influences ? ['Einflüsse', a.influences] : null,
+            a.highlights ? ['Highlights', a.highlights] : null,
+            a.secretSkill ? ['Geheimer Skill', a.secretSkill] : null,
+            a.tracks ? ['Eigene Tracks', Array.isArray(a.tracks) ? a.tracks.join('<br>') : a.tracks] : null,
+            a.favSong ? ['Lieblingslied', a.favSong] : null
+          ].filter(Boolean)
+           .map(([label, val]) => `<div class="artist-detail"><span class="artist-detail-label">${label}</span><span class="artist-detail-value">${val}</span></div>`)
+           .join('');
+
+          return `<article class="artist-card">
+            ${photo}
+            <div class="artist-body">
+              <div class="artist-header">
+                <h2 class="artist-name">${a.name}</h2>
+                ${a.realName ? `<div class="artist-realname">${a.realName}</div>` : ''}
+              </div>
+              ${genres ? `<div class="artist-tags">${genres}</div>` : ''}
+              ${''/* bio bleibt im JSON, wird aber nicht angezeigt */}
+              ${details ? `<div class="artist-details">${details}</div>` : ''}
+              ${links ? `<div class="social-row">${links}</div>` : ''}
+            </div>
+          </article>`;
+        }).join('');
+      });
+  </script>
 </body>
 </html>

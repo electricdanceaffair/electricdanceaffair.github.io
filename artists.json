@@ -1,0 +1,56 @@
+[
+  {
+    "name": "Gabriel Kiedis",
+    "activeSince": "2020",
+    "equipment": "1x Xone 96, 3x CDJ 2000",
+    "genres": ["Disko", "Funk", "House", "Synth Pop", "Postpunk", "Wave", "Techno", "Hardgroove", "Trance"],
+    "influences": "Nomi Elektra, Jako Jako, YÅ, Clär, HVOB, DBBD x Miss Bashful",
+    "highlights": "Alle Events von Electric Dance Affair, jede Fusion",
+    "secretSkill": "Kann leider nur Musik - dafür sehr viele Instrumente",
+    "tracks": [
+      "Gabriel Kiedis - Floating Flowers",
+      "Songs mit „Bonnie im Kleid“"
+    ],
+    "favSong": "Grauzone - Eisbär",
+    "bio": "Gabriel Kiedis bewegt sich als DJ und Musiker an der Schnittstelle von Techno, Hardgroove und Trance - immer auf der Suche nach dem perfekten Spannungsfeld zwischen Ekstase, Melancholie und kollektiver Energie. Als Resident-DJ bei Electric Dance Affair und Teil der Punk/Rock-Band „Bonnie im Kleid“ entstehen Klanglandschaften zwischen düsterem Drive und leuchtender Euphorie.",
+    "photo": "images/artists/gabriel-kiedis.jpg",
+    "links": {
+      "soundcloud": "https://soundcloud.com/gabriel-kiedis",
+      "instagram": "https://www.instagram.com/gabrielkiedis/"
+    }
+  },
+  {
+    "name": "logN",
+    "realName": "Dennis",
+    "activeSince": "2012",
+    "equipment": "1x Xone 92, 3x CDJ",
+    "genres": ["Techno", "Wave", "Drum and Bass", "Future Garage"],
+    "influences": "Sleeparchive, SPFDJ, Delete - Predatory Things Of A Minute",
+    "highlights": "Achilles Festival",
+    "secretSkill": "Bouldern",
+    "tracks": [
+      "logN - Zorg (Original Mix)",
+      "Lobotomic & logN - Tin Brain (Original Mix)",
+      "logN - /H7. (Original Mix)"
+    ],
+    "photo": "images/artists/logn.jpg",
+    "links": {
+      "soundcloud": "https://soundcloud.com/logntchn"
+    }
+  },
+  {
+    "name": "Lobotomic",
+    "realName": "Philip",
+    "activeSince": "2012",
+    "equipment": "2 XDJs, Pioneer Mixer",
+    "genres": ["Psybient", "Psy-Techno", "Psytrance"],
+    "influences": "Carbon Based Lifeforms, Triforce, Zen Mechanics",
+    "highlights": "100Hz, Shakespeare (Salzburg), Club Unique (Leipzig)",
+    "secretSkill": "Einhändiges Klatschen",
+    "tracks": ["Auf SoundCloud vorbeischauen"],
+    "photo": "images/artists/lobotomic.jpg",
+    "links": {
+      "soundcloud": "https://soundcloud.com/lobotomic_music"
+    }
+  }
+]
